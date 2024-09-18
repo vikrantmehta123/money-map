@@ -1,0 +1,84 @@
+.lever-navbar {
+    background-color: var(--blue-gray-50);
+    height: 80px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .lever-navbar .frame {
+    align-items: center;
+    display: inline-flex;
+    gap: 32px;
+    left: 871px;
+    position: absolute;
+    top: 30px;
+  }
+  
+  .lever-navbar .text-wrapper {
+    color: #7a5cfa;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .lever-navbar .vector {
+    height: 17px;
+    position: relative;
+    width: 9px;
+  }
+  
+  .lever-navbar .div {
+    color: var(--blue-gray-500);
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .lever-navbar .img {
+    height: 17px;
+    margin-right: -1px;
+    position: relative;
+    width: 9px;
+  }
+  
+  .lever-navbar .group {
+    height: 20px;
+    left: 119px;
+    position: absolute;
+    top: 30px;
+    width: 191px;
+  }
+  
+  .lever-navbar .text-wrapper-2 {
+    color: #000000;
+    font-family: "Instrument Sans-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 8px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .lever-navbar .currency-rupee-INR {
+    height: 44px !important;
+    left: 66px !important;
+    position: absolute !important;
+    top: 18px !important;
+    width: 40px !important;
+  }
+  
