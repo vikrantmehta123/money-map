@@ -1,9 +1,12 @@
 import React from "react";
-import MultiStepForm from "./MultiStepForm";
-
-const Planner = () =>{
+import Form from "./Form";
+import { Toolbar, Box } from "@mui/material";
+const Planner = () => {
     return (
-        <MultiStepForm/>
+        <Box>
+            <Toolbar />
+            <Form />
+        </Box>
     )
 }
 

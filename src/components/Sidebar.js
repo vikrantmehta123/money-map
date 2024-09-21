@@ -25,6 +25,7 @@ export default function Sidebar({onResourceClick}) {
                 {['Books', 'Courses', 'YouTube and Other', 'Mental Models'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton onClick={() => onResourceClick(text)}>
+                            
                             <ListItemText primary={text} />
                         </ListItemButton>
                     </ListItem>
