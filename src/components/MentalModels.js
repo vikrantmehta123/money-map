@@ -21,8 +21,8 @@ const models = [
         "example": `If you are a manager, think about the last performance review that you conducted. 
                 If you were evaluating performance for the entire year, chances are that you paid more attention
                 to the recent performance.`
-    }, 
-    
+    },
+
 ];
 
 
@@ -30,8 +30,19 @@ const MentalModels = () => {
 
     return (
         <Box>
-            {/* TODO: Include a Header that explains the rationale behind the mental models*/}
+            <Box mb={4}>
+                <Typography variant="h4" gutterBottom>
+                    Mental Models
+                </Typography>
+                <Typography variant="body1">
+                    A mental model is any idea that helps us understand the world better. This concept
+                    comes from Charlie Munger, who encouraged using mental models in thinking.
+                    The goal is to apply these models when solving problems. As Charlie says, if you want
+                    big success, look for different models working together.
+                    This collection shares some important mental models I've gathered over the years.
 
+                </Typography>
+            </Box>
 
             {models.map((model, index) => (
                 <Accordion key={index}>
@@ -44,10 +55,12 @@ const MentalModels = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
-                            <strong>Definition: </strong> {model.definition}
+                            <Typography component="span" fontWeight="bold">Definition: </Typography>
+                            {model.definition}
                         </Typography>
                         <Typography>
-                            <strong>Example: </strong> {model.example}
+                            <Typography component="span" fontWeight="bold">Example: </Typography>
+                            {model.example}
                         </Typography>
                     </AccordionDetails>
                 </Accordion>

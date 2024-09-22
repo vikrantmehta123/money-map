@@ -1,31 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TextField, Button, Box, Toolbar } from '@mui/material';
 
-const Form = () => {
-    const [activeStep, setActiveStep] = useState(0);
-    const [formValues, setFormValues] = useState({
-        currentAge: '',
-        retirementAge: '',
-        currentPrincipal: '',
-        annualInflation: '',
-        annualReturnRate: '',
-        annualInvestmentCapacity: ''
-    });
-
-    // Handler to go to the next step
-    const handleNext = () => {
-        setActiveStep((prevStep) => prevStep + 1);
-    };
-
-    // Handler to go to the previous step
-    const handleBack = () => {
-        setActiveStep((prevStep) => prevStep - 1);
-    };
-
-    // Handle input changes
-    const handleChange = (e) => {
-        setFormValues({ ...formValues, [e.target.name]: e.target.value });
-    };
+const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, handleSubmit }) => {
 
     // Conditional rendering of form fields based on the current step
     const renderStepFields = () => {
@@ -84,6 +60,16 @@ const Form = () => {
                 return (
                     <>
                         <TextField
+                            label="Annual Investment Capacity"
+                            type="number"
+                            name="annualInvestmentCapacity"
+                            value={formValues.annualInvestmentCapacity}
+                            onChange={handleChange}
+                            placeholder="Enter how much you will save now"
+                            fullWidth
+                            margin="normal"
+                        />
+                        <TextField
                             label="Annual Expected Return Rate (%)"
                             type="number"
                             name="annualReturnRate"
@@ -93,13 +79,28 @@ const Form = () => {
                             fullWidth
                             margin="normal"
                         />
+                    </>
+                );
+            case 3:
+                return (
+                    <>
                         <TextField
-                            label="Annual Investment Capacity"
+                            label="Annual Withdrawal"
                             type="number"
-                            name="annualInvestmentCapacity"
-                            value={formValues.annualInvestmentCapacity}
+                            name="annualWithdrawal"
+                            value={formValues.annualWithdrawal}
                             onChange={handleChange}
-                            placeholder="Enter annual investment capacity"
+                            placeholder="Enter the money you need each year now"
+                            fullWidth
+                            margin="normal"
+                        />
+                        <TextField
+                            label="Annual Investment Growth Rate (%)"
+                            type="number"
+                            name="annualInvestmentGrowthRate"
+                            value={formValues.annualInvestmentGrowthRate}
+                            onChange={handleChange}
+                            placeholder="Enter how much you will increase savings each year"
                             fullWidth
                             margin="normal"
                         />
@@ -124,19 +125,18 @@ const Form = () => {
                         Back
                     </Button>
 
-                    {activeStep < 2 && (
+                    {activeStep < 3 && (
                         <Button variant="contained" onClick={handleNext}>
                             Next
                         </Button>
                     )}
-                    {activeStep === 2 && (
-                        <Button variant="contained" color="primary">
+                    {activeStep === 3 && (
+                        <Button variant="contained" color="primary" onClick={handleSubmit}>
                             Submit
                         </Button>
                     )}
                 </Box>
             </Box>
-
         </Box>
     );
 };

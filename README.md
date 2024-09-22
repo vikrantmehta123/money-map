@@ -1,10 +1,9 @@
-# Getting Started with Create React App
+# MoneyMap: Experiment With Your Financial Plans
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MoneyMap is a simulator for your retirement plans. It's not financial advice, neither is it a one-stop solution for 
+your financial needs. What it is, is a playground. It gives you a platform to plug in different inputs and see a rough approximation of the financial future, which in many cases is quite useful. 
 
-## Available Scripts
-
-In the project directory, you can run:
+You also have a curated list of resources that you can check out in the resources section. It contains the top books, blogs, YouTube videos, and courses that you can check out to improve your financial know-how. 
 
 ### `npm start`
 
