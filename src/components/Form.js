@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, Button, Box, Toolbar } from '@mui/material';
+import { TextField, Button, Box, Toolbar, Typography } from '@mui/material';
 
 const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, handleSubmit }) => {
 
@@ -25,7 +25,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             name="retirementAge"
                             value={formValues.retirementAge}
                             onChange={handleChange}
-                            placeholder="Enter your retirement age"
+                            placeholder="Enter age at which you want to retire"
                             fullWidth
                             margin="normal"
                         />
@@ -40,7 +40,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             name="currentPrincipal"
                             value={formValues.currentPrincipal}
                             onChange={handleChange}
-                            placeholder="Enter current principal"
+                            placeholder="Enter Your Current Savings"
                             fullWidth
                             margin="normal"
                         />
@@ -65,7 +65,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             name="annualInvestmentCapacity"
                             value={formValues.annualInvestmentCapacity}
                             onChange={handleChange}
-                            placeholder="Enter how much you will save now"
+                            placeholder="Enter how much you'll save each year"
                             fullWidth
                             margin="normal"
                         />
@@ -90,7 +90,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             name="annualWithdrawal"
                             value={formValues.annualWithdrawal}
                             onChange={handleChange}
-                            placeholder="Enter the money you need each year now"
+                            placeholder="Enter the money you spend each year now"
                             fullWidth
                             margin="normal"
                         />
@@ -115,7 +115,15 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
         <Box>
             <Toolbar />
             <Box sx={{ maxWidth: 500, margin: 'auto' }}>
-                {/* Render TextFields for the current step */}
+                <Box mb={2}>
+                    <Typography variant="h4" gutterBottom>
+                        Some Details...
+                    </Typography>
+                    <Typography variant="body1">
+                        Before we can calculate the financial map, we need some details. Please enter them to the 
+                        best of your knowledge. If you're unsure about inflation rate, etc., keep the default values.
+                    </Typography>
+                </Box>
                 {renderStepFields()}
 
                 {/* Navigation buttons */}

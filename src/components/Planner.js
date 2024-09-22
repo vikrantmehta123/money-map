@@ -3,12 +3,15 @@ import Form from "./Form";
 import FinancialPlanTable from "./FinancialPlanTable";
 import FormSidebar from "./FormSidebar";
 import { Toolbar, Box } from "@mui/material";
+import FinancialPlanPlot from "./FinancialPlanPlot";
 
 
 const Planner = () => {
     // States for the Data Table
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [rows, setRows] = useState([]);
+
+    const [isShowPlot, setIsShowPlot] = useState(false);
 
     // States for the Form
     const [activeStep, setActiveStep] = useState(0);
@@ -105,7 +108,12 @@ const Planner = () => {
         <Box sx={{ display: 'flex' }}>
             <Toolbar />
             {isFormSubmitted && (
-                <FormSidebar formValues={formValues} updateFormValues={handleSidebarUpdate} handleSubmit={handleSubmit} />
+                <FormSidebar
+                    formValues={formValues}
+                    updateFormValues={handleSidebarUpdate}
+                    handleSubmit={handleSubmit}
+                    setIsShowPlot={setIsShowPlot}
+                />
             )}
             <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
                 {!isFormSubmitted ?
@@ -117,9 +125,12 @@ const Planner = () => {
                         handleBack={handleBack}
                         handleSubmit={handleSubmit}
 
-                    /> : <FinancialPlanTable rows={rows} />}
+                    /> : isShowPlot ? (
+                        <FinancialPlanPlot rows={rows} />
+                    ) : (
+                        <FinancialPlanTable rows={rows} />
+                    )}
             </Box>
-
         </Box>
     )
 }
