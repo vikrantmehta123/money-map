@@ -16,13 +16,29 @@ const models = [
                 Because you were able to recall terrorist attacks easily. Same goes with crashes in stock markets.`
     },
     {
-        "title": "Recency Effect",
-        "definition": "The more recent the event, the more weight we attach to it.",
-        "example": `If you are a manager, think about the last performance review that you conducted. 
-                If you were evaluating performance for the entire year, chances are that you paid more attention
-                to the recent performance.`
-    },
-
+        'title': "Loss Aversion Bias", 
+        'definition': `We tend to weigh losses more heavily than the gains.`, 
+        'example': `If you make a profit of 100 Rs, it's not the same as making a loss of 100 Rs. 100 Rs loss has much
+        higher weight in our minds, and that's why we avoid realizing this loss. Have you seen how many people 
+        hold on to their losing stocks? Loss Aversion is precisely the reason.`
+    }, 
+    {
+        'title': 'Survivorship Bias', 
+        'definition' : 'Those who live to tell the tale, tell a distorted tale.',
+        'example': `This is most apparent in funds. Many funds report their successful funds. But they don't report their
+        failed funds. As a result, the returns are distorted.`
+    }, 
+    {
+        'title':'Compounding', 
+        'definition': 'Returns grow exponentially, the longer the time span and the higher the return', 
+        'example': `Check out Mohnish Pabrai's video on YouTube on Compounding. Anything and everything compounds!`
+    }, 
+    {
+        'title' : 'Feedback Loops', 
+        'definition' : `Elements of a system respond to each other based on some feedback, in some sort of a feedback loop.`, 
+        'example' : `Transport is a system. Unusual traffic based on accident is a response ( unusual traffic ) 
+        based on a feedback ( accident ). Then people honk ( response to feedback of unusual traffic ),`
+    }
 ];
 
 

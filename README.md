@@ -5,13 +5,10 @@ your financial needs. What it is, is a playground. It gives you a platform to pl
 
 You also have a curated list of resources that you can check out in the resources section. It contains the top books, blogs, YouTube videos, and courses that you can check out to improve your financial know-how. 
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Tech Stack Used:
+- ReactJS
+- Javascript
+- Material UI
 
 ### `npm test`
 

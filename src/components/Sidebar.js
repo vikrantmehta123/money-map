@@ -22,7 +22,7 @@ export default function Sidebar({onResourceClick}) {
         >
             <Toolbar />
             <List>
-                {['Books', 'Courses', 'YouTube and Other', 'Mental Models'].map((text, index) => (
+                {['Books', 'Courses, YouTube and Other', 'Mental Models'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton onClick={() => onResourceClick(text)}>
                             

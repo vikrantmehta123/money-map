@@ -19,7 +19,7 @@ const Resources = () => {
                 return <Books />
             case "Mental Models":
                 return <MentalModels/>
-            case "Courses":
+            case "Courses, YouTube and Other":
                 return <Courses/>
             default:
                 return <Books />
