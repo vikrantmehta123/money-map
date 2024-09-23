@@ -15,7 +15,8 @@ const FinancialPlanPlot = ({ rows }) => {
                 </Typography>
                 <Typography variant="body1">
                     Based on the inputs you have provided, the following chart shows how your networth would look like each year.
-                    One key thing to notice is whether your networth is dipping towards the end.
+                    One key thing to notice is whether your networth is dipping towards the end. Ideally, you want a 
+                    smooth, increasing, exponential curve.
                 </Typography>
             </Box>
             <Box display='flex' justifyContent='center' alignItems='center'>

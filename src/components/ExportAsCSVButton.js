@@ -3,14 +3,15 @@ import Button from '@mui/material/Button';
 
 const ExportCSVButton = ({ rows, headers }) => {
     // Function to convert table data to CSV format
-
     const convertToCSV = () => {
         const headerRow = headers.join(',');
-
         const csvRows = rows.map(row =>
             headers.map(header => row[header]).join(',')
         );
-
+        
+        console.log(rows[0]);
+        console.log(headers);
+        console.log(csvRows);
         // Combine header and rows
         return [headerRow, ...csvRows].join('\n');
     };
@@ -22,7 +23,6 @@ const ExportCSVButton = ({ rows, headers }) => {
         // Create a Blob from the CSV data
         const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
 
-        // Create a download link and click it
         const link = document.createElement('a');
         const url = URL.createObjectURL(blob);
         link.href = url;

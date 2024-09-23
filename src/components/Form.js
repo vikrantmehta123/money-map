@@ -10,6 +10,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                 return (
                     <>
                         <TextField
+                            required
                             label="Current Age"
                             type="number"
                             name="currentAge"
@@ -20,6 +21,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             margin="normal"
                         />
                         <TextField
+                            required
                             label="Retirement Age"
                             type="number"
                             name="retirementAge"
@@ -35,6 +37,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                 return (
                     <>
                         <TextField
+                            required
                             label="Current Principal"
                             type="number"
                             name="currentPrincipal"
@@ -45,6 +48,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             margin="normal"
                         />
                         <TextField
+                            required
                             label="Annual Inflation (%)"
                             type="number"
                             name="annualInflation"
@@ -60,6 +64,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                 return (
                     <>
                         <TextField
+                            required
                             label="Annual Investment Capacity"
                             type="number"
                             name="annualInvestmentCapacity"
@@ -70,6 +75,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             margin="normal"
                         />
                         <TextField
+                            required
                             label="Annual Expected Return Rate (%)"
                             type="number"
                             name="annualReturnRate"
@@ -85,6 +91,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                 return (
                     <>
                         <TextField
+                            required
                             label="Annual Withdrawal"
                             type="number"
                             name="annualWithdrawal"
@@ -95,6 +102,7 @@ const Form = ({ activeStep, formValues, handleChange, handleNext, handleBack, ha
                             margin="normal"
                         />
                         <TextField
+                            required
                             label="Annual Investment Growth Rate (%)"
                             type="number"
                             name="annualInvestmentGrowthRate"

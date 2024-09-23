@@ -10,7 +10,7 @@ import { Box, Typography, Toolbar } from '@mui/material';
 import ExportCSVButton from './ExportAsCSVButton';
 
 const FinancialPlanTable = ({ rows }) => {
-    let headers = ["Age", "Inflow", "Outflow", "Networth"];
+    let headers = ["age", "inflow", "outflow", "networth"];
     return (
         <Box maxWidth="md">
             <Toolbar />

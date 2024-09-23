@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 
 export const NavigationBar = () => {
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#f8f9fa", color: "#333", zIndex: (theme) => theme.zIndex.drawer + 1 }} elevation={6}>
+    <AppBar position="fixed" sx={{ backgroundColor: "#333", color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }} elevation={6}>
       <Toolbar>
         {/* Links Section */}
         <Box sx={{ display: "flex", flexGrow: 1 }}>

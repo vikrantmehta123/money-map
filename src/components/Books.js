@@ -1,5 +1,5 @@
+// Imports
 import React from "react";
-
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Box } from "@mui/material";
 
+// Top 5 Books and their description
 const books = [
     {
         "title": "Poor Charlie's Almanack",
@@ -25,26 +26,27 @@ const books = [
         "author": "Robert Kiyosaki",
         "description": `Although the author has lost credibility in recent times, the principles from the book are still
         solid. A must read if you want to retire well. `
-    }, 
+    },
     {
-        'title':"Thinking, Fast and Slow", 
-        'author': "Kaniel Kahnemann", 
-        "description":`This is not an easy read. But a reading worthy of the effort. It's not a financial book as well.
+        'title': "Thinking, Fast and Slow",
+        'author': "Kaniel Kahnemann",
+        "description": `This is not an easy read. But a reading worthy of the effort. It's not a financial book as well.
         It introduces the ways in which we think- and how our thinking can fail. The biases presented in this book will
         be extremely helpful when you invest your own money.`
-    }, 
+    },
     {
-        'title':"Nudge", 
-        "author": "Richard Thaler", 
+        'title': "Nudge",
+        "author": "Richard Thaler",
         "description": `Another classic from a Nobel laureate. It expands our understanding of our cognitive biases 
         applied to a financial setting. Extremely useful when you spend, save, or invest money.`
     }
 ]
 
+// The React Component
 const Books = () => {
-
     return (
         <Box>
+            {/* The header and the description of the section */}
             <Box mb={4}>
                 <Typography variant="h4" gutterBottom>
                     Top 5 Books to Read to Master Personal Finance
@@ -56,6 +58,7 @@ const Books = () => {
                 </Typography>
             </Box>
 
+            {/* The actual list */}
             {books.map((book, index) => (
                 <Accordion key={index}>
                     <AccordionSummary
